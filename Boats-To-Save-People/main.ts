@@ -15,3 +15,5 @@ function boatsToSavePeople(people: number[], limit: number): number {
   }
   return boats;
 }
+
+console.log([51, 62, 45, 80, 15, 90, 67, 55], 100);
