@@ -5,7 +5,7 @@ function maxArea(heights: number[]) {
   while (left < right) {
     maxArea = Math.max(
       maxArea,
-      Math.min(heights[left], heights[right]) * (right - left)
+      Math.min(heights[left], heights[right]) * (right - left) // width * length
     );
 
     if (heights[left] < heights[right]) {
