@@ -1,5 +1,5 @@
 function boatsToSavePeople(people: number[], limit: number): number {
-  const sortedPeople = people.sort((a, b) => a - b);
+  const sortedPeople = people.sort((a, b) => a - b); //[...people].sort((a. b) => a - b) コピーしてからソートすることも考慮
   let smallest = 0;
   let biggest = sortedPeople.length - 1;
   let boats = 0;
@@ -16,4 +16,5 @@ function boatsToSavePeople(people: number[], limit: number): number {
   return boats;
 }
 
-console.log([51, 62, 45, 80, 15, 90, 67, 55], 100);
+boatsToSavePeople([51, 62, 45, 80, 15, 90, 67, 55], 100);
+console.log(arry);
