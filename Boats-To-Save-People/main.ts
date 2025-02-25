@@ -16,5 +16,5 @@ function boatsToSavePeople(people: number[], limit: number): number {
   return boats;
 }
 
-boatsToSavePeople([51, 62, 45, 80, 15, 90, 67, 55], 100);
-console.log(arry);
+const result = boatsToSavePeople([51, 62, 45, 80, 15, 90, 67, 55], 100);
+console.log(result);
