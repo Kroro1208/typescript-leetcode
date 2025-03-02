@@ -4,6 +4,7 @@ function findFirst(nums: number[], target: number): number {
   while (left <= right) {
     const mid = Math.floor((left + right) / 2);
     if (nums[mid] === target) {
+      // 左端を調べたいのでmid-1を条件にする
       if (nums[mid - 1] !== target) {
         return mid;
       }
@@ -23,6 +24,7 @@ function findLast(nums: number[], target: number): number {
   while (right >= left) {
     const mid = Math.floor((left + right) / 2);
     if (nums[mid] === target) {
+      // 右端を調べたいのでmid+1を条件にする
       if (nums[mid + 1] !== target) {
         return mid;
       }
