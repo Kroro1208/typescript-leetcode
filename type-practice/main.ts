@@ -59,3 +59,8 @@ class MapPin extends Coordinates {
 }
 
 const pin = new MapPin({ lat: 20, lng: 30, marketStatus: "pinned" });
+const pinLocation = pin.coordinates;
+console.log(pinLocation);
+
+pin.coordinates = { lat: 35, lng: 45 };
+console.log(pin.coordinates);
