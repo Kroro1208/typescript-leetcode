@@ -64,3 +64,24 @@ console.log(pinLocation);
 
 pin.coordinates = { lat: 35, lng: 45 };
 console.log(pin.coordinates);
+
+type Person = {
+  username: string;
+  email: string;
+  phone: number;
+};
+
+// type PersonKeyType = keyof Person;
+// type PesonzValueType = Person[keyof Person];
+
+type ValueType<T> = T[keyof T];
+type PesonzValueType = ValueType<Person>;
+
+type UserStatus = {
+  active: boolean;
+  inactive: boolean;
+  pending: boolean;
+};
+
+type UserRecordType = Record<"active" | "inactive" | "pending", boolean>;
+type UserRecordType2 = Record<string, boolean>;
