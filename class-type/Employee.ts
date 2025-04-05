@@ -1,4 +1,11 @@
-abstract class Employee {
+interface EmployeeType {
+  first: string;
+  last: string;
+  getPay(): number;
+  greet(): void;
+}
+
+abstract class Employee implements EmployeeType {
   constructor(
     public first: string,
     public last: string
@@ -26,13 +33,19 @@ class PartTimeEmployee extends Employee {
   constructor(
     first: string,
     last: string,
-    private hourRate: number,
-    private hourWorked: number
+    private hourlyRate: number,
+    private hoursWorked: number
   ) {
     super(first, last);
   }
 
   getPay(): number {
-    return this.hourRate * this.hourWorked;
+    return this.hourlyRate * this.hoursWorked;
   }
 }
+
+const naoya = new FullTimeEmpolyee("naoya", "yamagata", 5000);
+const akira = new PartTimeEmployee("akira", "yamagata", 1200, 5);
+
+console.log(naoya.getPay());
+console.log(akira.getPay());
